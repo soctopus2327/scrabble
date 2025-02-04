@@ -1,6 +1,6 @@
 # Scrabble
 
-A Turn-based (currently single device) Scrabble Application built with Elixir using the Phoenix Framework.
+A Turn-based (currently single device) Scrabble Application built with Elixir using the Phoenix Framework and PostgreSQL for database.
 
 
 Demo:
