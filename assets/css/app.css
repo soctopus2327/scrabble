@@ -1,0 +1,106 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1000px;  
+  padding: 0.5rem;   
+}
+
+.tile {
+  @apply w-8 h-8 bg-yellow-100 border border-yellow-700 rounded  
+         flex items-center justify-center relative cursor-move
+         shadow-sm transition-transform hover:scale-105;
+}
+
+.tile.dragging {
+  @apply opacity-50;
+}
+
+.tile .letter {
+  @apply text-base font-bold text-gray-800;  
+}
+
+.tile .points {
+  @apply absolute bottom-0 right-0 text-[0.55rem] font-semibold text-gray-600;  
+}
+
+.tile-placed {
+  @apply w-full h-full bg-yellow-100 border border-yellow-700 rounded
+         flex items-center justify-center relative;
+}
+
+.board-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;  
+}
+
+.score-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.score-box {
+  width: 12rem;     
+  height: 6rem;   
+  background-color: rgba(128, 128, 128, 0.465);
+  padding: 0.5rem;
+}
+
+.score-box p {
+  font-size: 0.875rem;  
+}
+
+.active {
+  background-color: white;
+}
+
+.bg-wood {
+  background-image: linear-gradient(45deg, #8b4513 25%, #a0522d 25%, #a0522d 50%, #8b4513 50%, #8b4513 75%, #a0522d 75%, #a0522d 100%);
+  background-size: 20px 20px; 
+}
+
+.grid-cols-15 {
+  grid-template-columns: repeat(15, minmax(0, 1fr));
+}
+
+.bonus-label {
+  font-size: 0.6rem;  
+  font-weight: bold;
+  color: #333;
+}
+
+[data-row][data-col] {
+  width: 2rem;    
+  height: 2rem;   
+  font-size: 0.75rem;
+}
+
+.gap-8 {
+  gap: 0.5rem;  
+}
+
+.text-3xl {
+  font-size: 1.5rem;  
+  margin-bottom: 0.25rem;
+}
+
+#tile-rack {
+  padding: 0.5rem;  
+  gap: 0.5rem;      
+  margin-top: -0.5rem;
+}
+
+.gap-1 {
+  gap: 0.125rem;  
+}
+
+button {
+  @apply px-2 py-1 text-sm;  
+}
